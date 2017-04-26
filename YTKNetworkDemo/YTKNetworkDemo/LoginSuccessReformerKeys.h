@@ -8,17 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-UIKIT_EXTERN NSString * const kLoginSuccessDataKeyCode;
-UIKIT_EXTERN NSString * const kLoginSuccessDataKeyMessage;
-UIKIT_EXTERN NSString * const kLoginSuccessDataKeyFsIp;
-UIKIT_EXTERN NSString * const kLoginSuccessDataKeyFsPort;
-UIKIT_EXTERN NSString * const kLoginSuccessDataKeyGestirePwd;
-UIKIT_EXTERN NSString * const kLoginSuccessDataKeyRegisterYet;
-UIKIT_EXTERN NSString * const kLoginSuccessDataKeyRegisterationTimeout;
-UIKIT_EXTERN NSString * const kLoginSuccessDataKeyToken;
-UIKIT_EXTERN NSString * const kLoginSuccessDataKeyTokenTimeout;
-UIKIT_EXTERN NSString * const kLoginSuccessDataKeyTransport;
-UIKIT_EXTERN NSString * const kLoginSuccessDataKeyUserID;
-UIKIT_EXTERN NSString * const kLoginSuccessDataKeyUserPassword;
-UIKIT_EXTERN NSString * const kLoginSuccessDataKeyUserSip;
-UIKIT_EXTERN NSString * const kLoginSuccessDataKeyUsername;
+extern NSString * const kLoginSuccessDataKeyCode;
+extern NSString * const kLoginSuccessDataKeyMessage;
+extern NSString * const kLoginSuccessDataKeyFsIp;
+extern NSString * const kLoginSuccessDataKeyFsPort;
+extern NSString * const kLoginSuccessDataKeyGestirePwd;
+extern NSString * const kLoginSuccessDataKeyRegisterYet;
+extern NSString * const kLoginSuccessDataKeyRegisterationTimeout;
+extern NSString * const kLoginSuccessDataKeyToken;
+extern NSString * const kLoginSuccessDataKeyTokenTimeout;
+extern NSString * const kLoginSuccessDataKeyTransport;
+extern NSString * const kLoginSuccessDataKeyUserID;
+extern NSString * const kLoginSuccessDataKeyUserPassword;
+extern NSString * const kLoginSuccessDataKeyUserSip;
+extern NSString * const kLoginSuccessDataKeyUsername;

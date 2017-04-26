@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <QMYTKNetwork/YTKNetwork.h>
+#import "YTKNetwork/YTKNetwork.h"
 
 @interface LoginSuccessReformer : NSObject<YTKRequestDataReformer>
 

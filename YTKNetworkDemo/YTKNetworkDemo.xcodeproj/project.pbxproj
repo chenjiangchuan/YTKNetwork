@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28DF440A68F963F1BAEE0948 /* libPods-YTKNetworkDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FA46E2DB5EAEDA6D72E332 /* libPods-YTKNetworkDemo.a */; };
 		D69611AA1EB051C500DB67D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D69611A91EB051C500DB67D3 /* main.m */; };
 		D69611AD1EB051C500DB67D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D69611AC1EB051C500DB67D3 /* AppDelegate.m */; };
 		D69611B01EB051C600DB67D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69611AF1EB051C600DB67D3 /* ViewController.m */; };
@@ -27,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15FA46E2DB5EAEDA6D72E332 /* libPods-YTKNetworkDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YTKNetworkDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C12D06E361283FE02B4CE5C0 /* Pods-YTKNetworkDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTKNetworkDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YTKNetworkDemo/Pods-YTKNetworkDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		C6F64A07F37E3B62EFDB0E2A /* Pods-YTKNetworkDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTKNetworkDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-YTKNetworkDemo/Pods-YTKNetworkDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D69611A51EB051C500DB67D3 /* YTKNetworkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YTKNetworkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69611A91EB051C500DB67D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D69611AB1EB051C500DB67D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,17 +72,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28DF440A68F963F1BAEE0948 /* libPods-YTKNetworkDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06F10914D69A2B63B5EAEB93 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C12D06E361283FE02B4CE5C0 /* Pods-YTKNetworkDemo.debug.xcconfig */,
+				C6F64A07F37E3B62EFDB0E2A /* Pods-YTKNetworkDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D696119C1EB051C500DB67D3 = {
 			isa = PBXGroup;
 			children = (
 				D69611A71EB051C500DB67D3 /* YTKNetworkDemo */,
 				D69611A61EB051C500DB67D3 /* Products */,
+				06F10914D69A2B63B5EAEB93 /* Pods */,
+				DD290AFDDF262E653178483A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +162,14 @@
 			path = YTKNetwork;
 			sourceTree = "<group>";
 		};
+		DD290AFDDF262E653178483A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15FA46E2DB5EAEDA6D72E332 /* libPods-YTKNetworkDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D69611BC1EB051C600DB67D3 /* Build configuration list for PBXNativeTarget "YTKNetworkDemo" */;
 			buildPhases = (
+				507930020CA13DBDC3950EE8 /* [CP] Check Pods Manifest.lock */,
 				D69611A11EB051C500DB67D3 /* Sources */,
 				D69611A21EB051C500DB67D3 /* Frameworks */,
 				D69611A31EB051C500DB67D3 /* Resources */,
+				D30138715AEE91A73EF1368E /* [CP] Embed Pods Frameworks */,
+				5264DD30299CED85C1F780CC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -211,6 +238,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		507930020CA13DBDC3950EE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5264DD30299CED85C1F780CC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YTKNetworkDemo/Pods-YTKNetworkDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D30138715AEE91A73EF1368E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YTKNetworkDemo/Pods-YTKNetworkDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D69611A11EB051C500DB67D3 /* Sources */ = {
@@ -350,6 +425,7 @@
 		};
 		D69611BD1EB051C600DB67D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C12D06E361283FE02B4CE5C0 /* Pods-YTKNetworkDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YTKNetworkDemo/Info.plist;
@@ -361,6 +437,7 @@
 		};
 		D69611BE1EB051C600DB67D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6F64A07F37E3B62EFDB0E2A /* Pods-YTKNetworkDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YTKNetworkDemo/Info.plist;
